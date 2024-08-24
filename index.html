@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Leave Application System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="topnav">
+        <a id="logo" class="nav-link" href="#">MY NAME</a>
+        <a class="nav-link" href="#">Link 1</a>
+        <a class="nav-link" href="#">Link 2</a>
+        <a class="nav-link" href="#">Link 3</a>
+        <a class="nav-link" href="#">Link 4</a>
+        <a class="nav-link" href="#">Link 5</a>
+
+        <a id="about" class="nav-link" href="#">About Me</a>
+     </nav>
+
+    <div class="container">
+        <h1>Online Leave Application System</h1>
+        <form id="leave-form">
+            <label for="employee-name">Employee Name:</label>
+            <input type="text" id="employee-name" required>
+            
+            <label for="leave-type">Leave Type:</label>
+            <select id="leave-type">
+                <option value="Sick Leave">Sick Leave</option>
+                <option value="Casual Leave">Casual Leave</option>
+                <option value="Paid Leave">Paid Leave</option>
+            </select>
+            
+            <label for="leave-start">Start Date:</label>
+            <input type="date" id="leave-start" required>
+            
+            <label for="leave-end">End Date:</label>
+            <input type="date" id="leave-end" required>
+            
+            <label for="leave-reason">Reason:</label>
+            <textarea id="leave-reason" rows="4" required></textarea>
+            
+            <button type="submit">Submit Leave Request</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
