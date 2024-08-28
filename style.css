@@ -1,0 +1,169 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout for body and html to ensure the footer is at the bottom */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+/* Background and container styling */
+body {
+    background: linear-gradient(to right, #f0f0f0, #ffffff);
+    background-image: url('backgroung.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+}
+
+/* Ensure the container flexes to allow the footer to stay at the bottom */
+.container {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    margin: 50px auto; /* Adds space above and centers the container */
+    margin-top: 100px; /* This specifically adds more space between the navbar and form */
+}
+
+
+h1 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 14px 20px;
+    box-sizing: border-box;
+}
+
+.navbar .menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #4CAF50;
+    color: black;
+}
+
+.navbar .logo {
+    margin-right: auto;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+/* Footer always at the bottom */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Add margin at the top of the footer */
+}
+
+footer p {
+    margin: 0;
+    color: #333;
+    font-size: 1em;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive navbar for mobile screens */
+@media screen and (max-width: 600px) {
+    .navbar .icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar .menu {
+        display: none;
+    }
+
+    .navbar.responsive .menu {
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 15%;
+        left: 0;
+        right: 0;
+    }
+
+    .navbar.responsive .menu a {
+        padding: 10px 20px;
+    }
+}
